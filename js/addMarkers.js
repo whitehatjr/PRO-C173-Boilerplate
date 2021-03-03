@@ -115,70 +115,20 @@ AFRAME.registerComponent("create-markers", {
 
         pricePlane.appendChild(price);
         marker.appendChild(pricePlane);
-
+        
+        //ADD CODE HERE
+        
         // Dish Rating plane
-        var ratingPlane = document.createElement("a-entity");
-        ratingPlane.setAttribute("id", `rating-plane-${dish.id}`);
-        ratingPlane.setAttribute("position", { x: 2, y: 0, z: 0.5 });
-        ratingPlane.setAttribute("geometry", {
-          primitive: "plane",
-          width: 1.5,
-          height: 0.3
-        });
-
-        ratingPlane.setAttribute("material", {
-          color: "#F0C30F"
-        });
-        ratingPlane.setAttribute("rotation", { x: -90, y: 0, z: 0 });
-        ratingPlane.setAttribute("visible", false);
+        
 
         // Ratings
-        var rating = document.createElement("a-entity");
-        rating.setAttribute("id", `rating-${dish.id}`);
-        rating.setAttribute("position", { x: 0, y: 0.05, z: 0.1 });
-        rating.setAttribute("rotation", { x: 0, y: 0, z: 0 });
-        rating.setAttribute("text", {
-          font: "mozillavr",
-          color: "black",
-          width: 2.4,
-          align: "center",
-          value: `Customer Rating: ${dish.last_rating}`
-        });
-
-        ratingPlane.appendChild(rating);
-        marker.appendChild(ratingPlane);
+        
 
         // Dish review plane
-        var reviewPlane = document.createElement("a-entity");
-        reviewPlane.setAttribute("id", `review-plane-${dish.id}`);
-        reviewPlane.setAttribute("position", { x: 2, y: 0, z: 0 });
-        reviewPlane.setAttribute("geometry", {
-          primitive: "plane",
-          width: 1.5,
-          height: 0.5
-        });
-
-        reviewPlane.setAttribute("material", {
-          color: "#F0C30F"
-        });
-        reviewPlane.setAttribute("rotation", { x: -90, y: 0, z: 0 });
-        reviewPlane.setAttribute("visible", false);
-
+        
+       
         // Dish review
-        var review = document.createElement("a-entity");
-        review.setAttribute("id", `review-${dish.id}`);
-        review.setAttribute("position", { x: 0, y: 0.05, z: 0.1 });
-        review.setAttribute("rotation", { x: 0, y: 0, z: 0 });
-        review.setAttribute("text", {
-          font: "mozillavr",
-          color: "black",
-          width: 2.4,
-          align: "center",
-          value: `Customer Review: \n${dish.last_review}`
-        });
-
-        reviewPlane.appendChild(review);
-        marker.appendChild(reviewPlane);
+        
       }
     });
   },
