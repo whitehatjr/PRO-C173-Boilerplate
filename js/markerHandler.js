@@ -281,63 +281,24 @@ AFRAME.registerComponent("markerhandler", {
   },
 
   handleRatings: async function (dish) {
-
-    // Getting Table Number
-    var tNumber;
-    tableNumber <= 9 ? (tNumber = `T0${tableNumber}`) : `T${tableNumber}`;
-
-    // Getting Order Summary from database
-    var orderSummary = await this.getOrderSummary(tNumber);
-
-    var currentOrders = Object.keys(orderSummary.current_orders);
-
-    if (currentOrders.length > 0) {
-      // Close Modal
-      document.getElementById("rating-modal-div").style.display = "flex";
-      document.getElementById("rating-input").value = "0";
-      document.getElementById("feedback-input").value = "";
-
-      var saveRatingButton = document.getElementById("save-rating-button");
-
-      saveRatingButton.addEventListener("click", () => {
-        document.getElementById("rating-modal-div").style.display = "none";
-
-        //Get the input value(Review & Rating)
-        var rating = document.getElementById("rating-input").value;
-        var feedback = document.getElementById("feedback-input").value;
-
-        //Update db
-        firebase
-          .firestore()
-          .collection("dishes")
-          .doc(dish.id)
-          .update({
-            last_review: feedback,
-            last_rating: rating
-          })
-          .then(() => {
-            swal({
-              icon: "success",
-              title: "Thanks For Rating!",
-              text: "We Hope You Like Dish !!",
-              timer: 2500,
-              buttons: false
-            });
-          });
-      });
-
-    }
-    else{
-      swal({
-        icon: "warning",
-        title: "Oops!",
-        text: "No dish found to give ratings!!",
-        timer: 2500,
-        buttons: false
-      });
-    }
-
-
+    
+    /*
+    
+    
+    
+    
+    
+    REPLACE THE COMMENT WITH THE CODE HERE
+    
+    
+    
+    
+    
+    
+    
+    */
+    
+    
   },
   handleMarkerLost: function () {
     // Changing button div visibility
